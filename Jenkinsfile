@@ -14,7 +14,7 @@ pipeline {
 
         stage('Run PHP') {
             steps {
-                bat 'php index.php'
+                bat 'php index.html'
             }
         }
     }
