@@ -12,7 +12,19 @@ pipeline {
             }
         }
 
-        stage('Run PHP') {
+        stage('Install Dependencies') {
+            steps {
+                bat 'composer install'
+            }
+        }
+
+        stage('Run Unit Tests') {
+            steps {
+                bat 'vendor\\bin\\phpunit --testdox'
+            }
+        }
+
+        stage('Run App') {
             steps {
                 bat 'php index.php'
             }
