@@ -1,11 +1,11 @@
 <?php
-
 use PHPUnit\Framework\TestCase;
 
 class ExampleTest extends TestCase
 {
-    public function testBasic()
+    public function testSum()
     {
-        $this->assertTrue(true);
+        $result = 2 + 3;
+        $this->assertEquals(5, $result);
     }
 }
